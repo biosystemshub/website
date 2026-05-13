@@ -145,14 +145,13 @@ def card_html(meta: dict, url_prefix: str = '') -> str:
 
     badge = f'<span class="badge">{category}</span>' if category else ''
 
+    card_thumb = ''
     if thumb:
-        img_html = f'<img src="{_esc(thumb)}" alt="{title}" loading="lazy">'
-    else:
-        img_html = '<div class="card-thumb-placeholder">🧬</div>'
+        card_thumb = f'  <div class="card-thumb"><img src="{_esc(thumb)}" alt="{title}" loading="lazy"></div>\n'
 
     return (
         f'<article class="card" data-category="{category}">\n'
-        f'  <div class="card-thumb">{img_html}</div>\n'
+        f'{card_thumb}'
         f'  <div class="card-body">\n'
         f'    <div class="card-meta">\n'
         f'      {badge}\n'
@@ -174,7 +173,7 @@ def card_html(meta: dict, url_prefix: str = '') -> str:
 def _nav(active: str = 'articles') -> str:
     links = [
         ('index.html',          '../index.html',          'Home'),
-        ('articles/index.html', '../articles/index.html', 'Articles'),
+        ('articles/index.html', '../articles/index.html', 'Learn'),
         ('videos.html',         '../videos.html',         'Videos'),
         ('resources.html',      '../resources.html',      'Resources'),
         ('about.html',          '../about.html',          'About'),
@@ -199,7 +198,7 @@ def _footer(prefix: str = '../') -> str:
         <h4>Navigate</h4>
         <ul>
           <li><a href="{prefix}index.html">Home</a></li>
-          <li><a href="{prefix}articles/index.html">Articles</a></li>
+          <li><a href="{prefix}articles/index.html">Learn</a></li>
           <li><a href="{prefix}videos.html">Videos</a></li>
           <li><a href="{prefix}resources.html">Resources</a></li>
           <li><a href="{prefix}about.html">About</a></li>
@@ -273,7 +272,7 @@ def generate_articles_index(articles: list[dict]) -> str:
     </button>
     <ul class="nav-links" id="nav-links" role="list">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../articles/index.html" class="active">Articles</a></li>
+      <li><a href="../articles/index.html" class="active">Learn</a></li>
       <li><a href="../videos.html">Videos</a></li>
       <li><a href="../resources.html">Resources</a></li>
       <li><a href="../about.html">About</a></li>
@@ -290,9 +289,9 @@ def generate_articles_index(articles: list[dict]) -> str:
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="../index.html">Home</a>
         <span class="sep" aria-hidden="true">&rsaquo;</span>
-        <span>Articles</span>
+        <span>Learn</span>
       </nav>
-      <h1>Articles</h1>
+      <h1>Learn</h1>
       <p>Research articles, reviews, and tutorials on biological systems science.</p>
     </div>
   </header>
