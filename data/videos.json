@@ -1,0 +1,23 @@
+[
+  {
+    "id": "YOUTUBE_VIDEO_ID_1",
+    "title": "Introduction to Systems Biology",
+    "description": "A comprehensive lecture introducing the core principles of systems biology, network analysis, and mathematical modelling of biological processes.",
+    "category": "Systems Biology",
+    "date": "2026-01-10"
+  },
+  {
+    "id": "YOUTUBE_VIDEO_ID_2",
+    "title": "Gene Regulatory Networks: Structure and Dynamics",
+    "description": "Explores how transcription factor networks are wired, common network motifs, and what their topology reveals about cellular decision-making.",
+    "category": "Genetics & Genomics",
+    "date": "2026-02-20"
+  },
+  {
+    "id": "YOUTUBE_VIDEO_ID_3",
+    "title": "Metabolic Flux Analysis and Constraint-Based Modelling",
+    "description": "An introduction to flux balance analysis (FBA) for genome-scale metabolic modelling using stoichiometric constraints.",
+    "category": "Computational Biology",
+    "date": "2026-03-05"
+  }
+]

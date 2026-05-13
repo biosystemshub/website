@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Introduction to Systems Biology: Understanding Life as an Integrated System",
+    "date": "2026-05-12",
+    "author": "BiosystemsHub Editorial Team",
+    "affiliation": "BiosystemsHub",
+    "category": "Systems Biology",
+    "tags": [
+      "systems biology",
+      "networks",
+      "modelling",
+      "emergence",
+      "feedback"
+    ],
+    "description": "An accessible introduction to systems biology — what it is, why it matters, and the key concepts and computational tools researchers use to study living organisms as integrated wholes.",
+    "thumbnail": "",
+    "youtubeId": "",
+    "filename": "getting-started.html",
+    "url": "articles/getting-started.html"
+  },
+  {
+    "title": "How Cells Talk: A Quiet Language Written in Molecules",
+    "date": "2026-05-12",
+    "author": "BiosystemsHub Editorial Team",
+    "affiliation": "BiosystemsHub",
+    "category": "Systems Biology",
+    "tags": [
+      "cell signalling",
+      "signal transduction",
+      "receptors",
+      "calcium",
+      "neurotransmitters",
+      "systems biology"
+    ],
+    "description": "Inside the elegant signalling networks that let trillions of cells coordinate without a conductor — an accessible guide to cellular communication, receptors, and signal transduction.",
+    "thumbnail": "",
+    "youtubeId": "",
+    "filename": "how-cells-talk.html",
+    "url": "articles/how-cells-talk.html"
+  }
+]

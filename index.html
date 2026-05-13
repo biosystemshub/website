@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="site-root" content="">
+  <title>BiosystemsHub — Biological Systems Science</title>
+  <meta name="description" content="A curated hub for biological systems science: peer-reviewed articles, video lectures, and resources on systems biology, ecology, genetics, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="BiosystemsHub home">
+      <div class="nav-brand-icon" aria-hidden="true">B</div>
+      <span class="nav-brand-name">Biosystems<span>Hub</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="articles/index.html">Articles</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+<main class="page-main">
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="hero-title">
+
+    <!-- Biological network illustration (decorative, aria-hidden) -->
+    <div class="hero-canvas" aria-hidden="true">
+      <!--
+        Biological systems network: nodes represent molecular entities
+        (proteins, gene products, metabolites); edges represent interactions.
+        Layout mimics a scale-free network topology found in real biosystems.
+        Hub nodes (gold) pulse via SMIL <animate>; key edges carry
+        a traveling signal dash to suggest dynamic activity.
+      -->
+      <svg viewBox="0 0 1400 480" xmlns="http://www.w3.org/2000/svg"
+           preserveAspectRatio="xMidYMid slice" role="img"
+           aria-label="Biological systems network illustration">
+        <defs>
+          <!-- Glow filter for hub nodes -->
+          <filter id="hub-glow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="7" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <!-- Softer glow for medium nodes -->
+          <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- ══ EDGES (drawn first so nodes appear on top) ══ -->
+
+        <!-- Primary hub-to-hub edges (gold, slightly brighter) -->
+        <line x1="180" y1="215" x2="680" y2="172" stroke="rgba(197,148,42,.28)" stroke-width="1.2"/>
+        <line x1="680" y1="172" x2="1120" y2="208" stroke="rgba(197,148,42,.26)" stroke-width="1.2"/>
+        <line x1="680" y1="172" x2="432" y2="396" stroke="rgba(197,148,42,.22)" stroke-width="1"/>
+        <line x1="680" y1="172" x2="902" y2="392" stroke="rgba(197,148,42,.22)" stroke-width="1"/>
+        <line x1="432" y1="396" x2="902" y2="392" stroke="rgba(197,148,42,.18)" stroke-width="1"/>
+
+        <!-- Traveling signal: A→B -->
+        <line x1="180" y1="215" x2="680" y2="172"
+              stroke="rgba(197,148,42,.55)" stroke-width="1.5"
+              stroke-dasharray="6 16">
+          <animate attributeName="stroke-dashoffset" from="0" to="-132" dur="3.6s" repeatCount="indefinite"/>
+        </line>
+        <!-- Traveling signal: B→C -->
+        <line x1="680" y1="172" x2="1120" y2="208"
+              stroke="rgba(197,148,42,.50)" stroke-width="1.5"
+              stroke-dasharray="6 16">
+          <animate attributeName="stroke-dashoffset" from="0" to="-132" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+        </line>
+        <!-- Traveling signal: B→E -->
+        <line x1="680" y1="172" x2="902" y2="392"
+              stroke="rgba(197,148,42,.45)" stroke-width="1.4"
+              stroke-dasharray="5 15">
+          <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="2.8s" begin="0.6s" repeatCount="indefinite"/>
+        </line>
+
+        <!-- Secondary edges (white, subtle) -->
+        <line x1="180" y1="215" x2="356" y2="132" stroke="rgba(255,255,255,.14)" stroke-width="1"/>
+        <line x1="180" y1="215" x2="120" y2="328" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+        <line x1="180" y1="215" x2="84"  y2="158" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="180" y1="215" x2="272" y2="248" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="356" y1="132" x2="532" y2="218" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+        <line x1="356" y1="132" x2="680" y2="172" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="532" y1="218" x2="680" y2="172" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+        <line x1="532" y1="218" x2="602" y2="328" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="532" y1="218" x2="432" y2="396" stroke="rgba(255,255,255,.09)" stroke-width=".8"/>
+        <line x1="680" y1="172" x2="822" y2="138" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+        <line x1="680" y1="172" x2="1002" y2="158" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="680" y1="172" x2="962" y2="272" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="680" y1="172" x2="782" y2="314" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="822" y1="138" x2="1002" y2="158" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="822" y1="138" x2="1120" y2="208" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+        <line x1="1002" y1="158" x2="1268" y2="178" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="1002" y1="158" x2="1120" y2="208" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="1120" y1="208" x2="1268" y2="178" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="1120" y1="208" x2="1062" y2="368" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="1120" y1="208" x2="1228" y2="318" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="120"  y1="328" x2="302" y2="318" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="272"  y1="248" x2="302" y2="318" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="302"  y1="318" x2="432" y2="396" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+        <line x1="302"  y1="318" x2="602" y2="328" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="602"  y1="328" x2="432" y2="396" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="602"  y1="328" x2="782" y2="314" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="782"  y1="314" x2="902" y2="392" stroke="rgba(255,255,255,.13)" stroke-width="1"/>
+        <line x1="782"  y1="314" x2="962" y2="272" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="432"  y1="396" x2="332" y2="462" stroke="rgba(255,255,255,.09)" stroke-width=".8"/>
+        <line x1="432"  y1="396" x2="702" y2="458" stroke="rgba(255,255,255,.09)" stroke-width=".8"/>
+        <line x1="902"  y1="392" x2="702" y2="458" stroke="rgba(255,255,255,.09)" stroke-width=".8"/>
+        <line x1="902"  y1="392" x2="1008" y2="468" stroke="rgba(255,255,255,.09)" stroke-width=".8"/>
+        <line x1="902"  y1="392" x2="1062" y2="368" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <line x1="1062" y1="368" x2="1228" y2="318" stroke="rgba(255,255,255,.10)" stroke-width=".8"/>
+        <line x1="1228" y1="318" x2="1318" y2="392" stroke="rgba(255,255,255,.08)" stroke-width=".8"/>
+        <line x1="84"   y1="158" x2="120"  y2="328" stroke="rgba(255,255,255,.08)" stroke-width=".8"/>
+
+        <!-- ══ HUB NODE AURAS (blurred background halos) ══ -->
+        <circle cx="180"  cy="215" r="30" fill="rgba(197,148,42,.09)" filter="url(#hub-glow)"/>
+        <circle cx="680"  cy="172" r="32" fill="rgba(197,148,42,.11)" filter="url(#hub-glow)"/>
+        <circle cx="1120" cy="208" r="28" fill="rgba(197,148,42,.09)" filter="url(#hub-glow)"/>
+        <circle cx="432"  cy="396" r="26" fill="rgba(197,148,42,.08)" filter="url(#hub-glow)"/>
+        <circle cx="902"  cy="392" r="26" fill="rgba(197,148,42,.08)" filter="url(#hub-glow)"/>
+
+        <!-- ══ HUB NODES — gold, pulsing radius + opacity ══ -->
+        <!-- Hub A (left) -->
+        <circle cx="180" cy="215" r="16"
+                fill="rgba(197,148,42,.52)" stroke="rgba(197,148,42,.88)" stroke-width="1.5"
+                filter="url(#node-glow)">
+          <animate attributeName="r"       values="16;19.5;16" dur="5s"   repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".8;1;.8"    dur="5s"   repeatCount="indefinite"/>
+        </circle>
+        <!-- Hub B (centre, brightest) -->
+        <circle cx="680" cy="172" r="15"
+                fill="rgba(197,148,42,.58)" stroke="rgba(197,148,42,.92)" stroke-width="1.5"
+                filter="url(#node-glow)">
+          <animate attributeName="r"       values="15;18.5;15" dur="4.4s" begin="1s"   repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".82;1;.82"  dur="4.4s" begin="1s"   repeatCount="indefinite"/>
+        </circle>
+        <!-- Hub C (right) -->
+        <circle cx="1120" cy="208" r="14"
+                fill="rgba(197,148,42,.50)" stroke="rgba(197,148,42,.86)" stroke-width="1.5"
+                filter="url(#node-glow)">
+          <animate attributeName="r"       values="14;17.5;14" dur="5.6s" begin="2.1s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".75;1;.75"  dur="5.6s" begin="2.1s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Hub D (lower-left) -->
+        <circle cx="432" cy="396" r="13"
+                fill="rgba(197,148,42,.46)" stroke="rgba(197,148,42,.82)" stroke-width="1.2"
+                filter="url(#node-glow)">
+          <animate attributeName="r"       values="13;16;13"   dur="6.2s" begin=".5s"  repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".75;1;.75"  dur="6.2s" begin=".5s"  repeatCount="indefinite"/>
+        </circle>
+        <!-- Hub E (lower-right) -->
+        <circle cx="902" cy="392" r="13"
+                fill="rgba(197,148,42,.46)" stroke="rgba(197,148,42,.82)" stroke-width="1.2"
+                filter="url(#node-glow)">
+          <animate attributeName="r"       values="13;16;13"   dur="4.9s" begin="1.6s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".75;1;.75"  dur="4.9s" begin="1.6s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- ══ MEDIUM NODES — white, opacity-pulsing ══ -->
+        <circle cx="356"  cy="132" r="8" fill="rgba(255,255,255,.22)" stroke="rgba(255,255,255,.48)" stroke-width="1" filter="url(#node-glow)">
+          <animate attributeName="opacity" values=".6;.9;.6" dur="7.1s" begin=".3s"  repeatCount="indefinite"/>
+        </circle>
+        <circle cx="532"  cy="218" r="9" fill="rgba(255,255,255,.20)" stroke="rgba(255,255,255,.44)" stroke-width="1" filter="url(#node-glow)">
+          <animate attributeName="opacity" values=".55;.88;.55" dur="6s"  begin="2.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="822"  cy="138" r="8" fill="rgba(255,255,255,.20)" stroke="rgba(255,255,255,.44)" stroke-width="1" filter="url(#node-glow)">
+          <animate attributeName="opacity" values=".6;.9;.6"   dur="5.4s" begin="1.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1002" cy="158" r="8" fill="rgba(255,255,255,.20)" stroke="rgba(255,255,255,.44)" stroke-width="1" filter="url(#node-glow)">
+          <animate attributeName="opacity" values=".6;.9;.6"   dur="6.6s" begin="3.1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1268" cy="178" r="7" fill="rgba(255,255,255,.17)" stroke="rgba(255,255,255,.38)" stroke-width="1">
+          <animate attributeName="opacity" values=".5;.8;.5"   dur="8.2s" begin="1.9s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="120"  cy="328" r="7" fill="rgba(255,255,255,.17)" stroke="rgba(255,255,255,.38)" stroke-width="1">
+          <animate attributeName="opacity" values=".5;.8;.5"   dur="7.6s" begin=".9s"  repeatCount="indefinite"/>
+        </circle>
+        <circle cx="302"  cy="318" r="8" fill="rgba(255,255,255,.20)" stroke="rgba(255,255,255,.44)" stroke-width="1">
+          <animate attributeName="opacity" values=".55;.86;.55" dur="5.1s" begin="2.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="602"  cy="328" r="8" fill="rgba(255,255,255,.20)" stroke="rgba(255,255,255,.44)" stroke-width="1">
+          <animate attributeName="opacity" values=".6;.9;.6"   dur="6.3s" begin="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="782"  cy="314" r="8" fill="rgba(255,255,255,.20)" stroke="rgba(255,255,255,.44)" stroke-width="1">
+          <animate attributeName="opacity" values=".55;.86;.55" dur="7.0s" begin="3.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1062" cy="368" r="7" fill="rgba(255,255,255,.17)" stroke="rgba(255,255,255,.38)" stroke-width="1">
+          <animate attributeName="opacity" values=".5;.8;.5"   dur="5.9s" begin=".6s"  repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1228" cy="318" r="8" fill="rgba(255,255,255,.20)" stroke="rgba(255,255,255,.44)" stroke-width="1">
+          <animate attributeName="opacity" values=".55;.86;.55" dur="6.9s" begin="2.4s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- ══ SMALL NODES — static, subtle ══ -->
+        <circle cx="84"   cy="158" r="5" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.28)" stroke-width=".8"/>
+        <circle cx="272"  cy="248" r="5" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.28)" stroke-width=".8"/>
+        <circle cx="962"  cy="272" r="5" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.28)" stroke-width=".8"/>
+        <circle cx="702"  cy="458" r="5" fill="rgba(255,255,255,.11)" stroke="rgba(255,255,255,.24)" stroke-width=".8"/>
+        <circle cx="1008" cy="468" r="5" fill="rgba(255,255,255,.11)" stroke="rgba(255,255,255,.24)" stroke-width=".8"/>
+        <circle cx="332"  cy="462" r="5" fill="rgba(255,255,255,.11)" stroke="rgba(255,255,255,.24)" stroke-width=".8"/>
+        <circle cx="1318" cy="392" r="4" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.20)" stroke-width=".8"/>
+      </svg>
+    </div>
+
+    <div class="container hero-inner">
+      <span class="hero-label">Open Science &middot; Community-Driven</span>
+      <h1 id="hero-title">Exploring the Frontiers of<br>Biological Systems Science</h1>
+      <p class="hero-tagline">
+        Peer-reviewed articles, curated video lectures, and essential resources
+        for researchers and students across systems biology and related disciplines.
+      </p>
+      <div class="hero-actions">
+        <a href="articles/index.html" class="btn btn-primary">Browse Articles</a>
+        <a href="videos.html" class="btn btn-outline">Watch Lectures</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Featured Articles ─────────────────────────────────── -->
+  <section class="section" aria-labelledby="featured-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="featured-heading">Featured Articles</h2>
+        <a href="articles/index.html">View all articles &rarr;</a>
+      </div>
+      <div class="cards-grid">
+        <!-- FEATURED_START -->
+        <article class="card" data-category="Systems Biology">
+  <div class="card-thumb"><div class="card-thumb-placeholder">🧬</div></div>
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="badge">Systems Biology</span>
+      <span class="card-date">May 12, 2026</span>
+    </div>
+    <h3><a href="articles/getting-started.html">Introduction to Systems Biology: Understanding Life as an Integrated System</a></h3>
+    <p class="card-author">By BiosystemsHub Editorial Team</p>
+    <p class="card-desc">An accessible introduction to systems biology — what it is, why it matters, and the key concepts and computational tools researchers use to study living organisms as integrated wholes.</p>
+    <div class="card-footer">
+      <a href="articles/getting-started.html" class="card-link">Read article</a>
+    </div>
+  </div>
+</article>
+        <article class="card" data-category="Systems Biology">
+  <div class="card-thumb"><div class="card-thumb-placeholder">🧬</div></div>
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="badge">Systems Biology</span>
+      <span class="card-date">May 12, 2026</span>
+    </div>
+    <h3><a href="articles/how-cells-talk.html">How Cells Talk: A Quiet Language Written in Molecules</a></h3>
+    <p class="card-author">By BiosystemsHub Editorial Team</p>
+    <p class="card-desc">Inside the elegant signalling networks that let trillions of cells coordinate without a conductor — an accessible guide to cellular communication, receptors, and signal transduction.</p>
+    <div class="card-footer">
+      <a href="articles/how-cells-talk.html" class="card-link">Read article</a>
+    </div>
+  </div>
+</article>
+        <!-- FEATURED_END -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Latest Videos ─────────────────────────────────────── -->
+  <section class="section" aria-labelledby="videos-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="videos-heading">Latest Videos</h2>
+        <a href="videos.html">View all videos &rarr;</a>
+      </div>
+      <div class="cards-grid" id="homepage-videos">
+        <p style="color:var(--text-muted);font-family:var(--font-sans)">Loading&hellip;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Topics ────────────────────────────────────────────── -->
+  <section class="section" style="background:var(--cream-dark)" aria-labelledby="topics-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="topics-heading">Topics We Cover</h2>
+      </div>
+      <div class="topics-grid">
+        <a href="articles/index.html" class="topic-card">
+          <span class="topic-icon">🔬</span>
+          <strong>Systems Biology</strong>
+        </a>
+        <a href="articles/index.html" class="topic-card">
+          <span class="topic-icon">🌿</span>
+          <strong>Ecology</strong>
+        </a>
+        <a href="articles/index.html" class="topic-card">
+          <span class="topic-icon">🧬</span>
+          <strong>Genetics &amp; Genomics</strong>
+        </a>
+        <a href="articles/index.html" class="topic-card">
+          <span class="topic-icon">💻</span>
+          <strong>Computational Biology</strong>
+        </a>
+        <a href="articles/index.html" class="topic-card">
+          <span class="topic-icon">🧠</span>
+          <strong>Neuroscience</strong>
+        </a>
+        <a href="articles/index.html" class="topic-card">
+          <span class="topic-icon">⚗️</span>
+          <strong>Biochemistry</strong>
+        </a>
+        <a href="articles/index.html" class="topic-card">
+          <span class="topic-icon">⚙️</span>
+          <strong>Bioengineering</strong>
+        </a>
+        <a href="articles/index.html" class="topic-card">
+          <span class="topic-icon">📄</span>
+          <strong>Reviews</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Call to action ────────────────────────────────────── -->
+  <section class="section" aria-labelledby="contribute-heading">
+    <div class="container" style="text-align:center;max-width:640px">
+      <h2 id="contribute-heading" style="font-family:var(--font-serif);color:var(--navy);font-size:1.6rem;margin-bottom:1rem">
+        Share Your Research
+      </h2>
+      <p style="font-family:var(--font-sans);color:var(--text-muted);margin-bottom:1.5rem">
+        Are you working on biosystems research? We welcome article submissions from
+        students, researchers, and practitioners at all career stages.
+      </p>
+      <a href="contact.html" class="btn btn-primary">Submit an Article</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>BiosystemsHub</h3>
+        <p>A curated resource for biological systems science — featuring peer-reviewed articles, video lectures, and community contributions from researchers worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles/index.html">Articles</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="articles/index.html">Systems Biology</a></li>
+          <li><a href="articles/index.html">Ecology</a></li>
+          <li><a href="articles/index.html">Genetics &amp; Genomics</a></li>
+          <li><a href="articles/index.html">Computational Biology</a></li>
+          <li><a href="articles/index.html">Neuroscience</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BiosystemsHub. Content licensed under
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.
+      </span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+# Deploy BiosystemsHub to GitHub Pages
+#
+# Triggered on every push to the main branch.
+# Steps:
+#   1. Check out the repository
+#   2. Run the Python build script (generates articles/index.html, data/articles.json,
+#      and updates the homepage featured section)
+#   3. Upload the entire project as a Pages artifact
+#   4. Deploy to GitHub Pages
+#
+# Setup (one-time):
+#   GitHub repo → Settings → Pages → Source → GitHub Actions
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+# Grant the minimum permissions required for Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment; cancel any queued run but do NOT
+# cancel the in-progress run so partial deployments are avoided.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run build script
+        run: python scripts/build.py
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload the entire project root as the site
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

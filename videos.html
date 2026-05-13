@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="site-root" content="">
+  <title>Videos — BiosystemsHub</title>
+  <meta name="description" content="Curated YouTube video lectures on systems biology, ecology, genetics, computational biology, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="videos">
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="BiosystemsHub home">
+      <div class="nav-brand-icon" aria-hidden="true">B</div>
+      <span class="nav-brand-name">Biosystems<span>Hub</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="articles/index.html">Articles</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+<main class="page-main">
+
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep" aria-hidden="true">›</span>
+        <span>Videos</span>
+      </nav>
+      <h1>Video Lectures</h1>
+      <p>Curated YouTube lectures on biological systems science — click any thumbnail to watch.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Category filter — category buttons are injected by main.js -->
+      <div class="filter-bar" role="group" aria-label="Filter by category">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" data-filter="all">All</button>
+      </div>
+
+      <!-- Video grid rendered by main.js from data/videos.json -->
+      <div class="cards-grid" id="videos-grid">
+        <p style="color:var(--text-muted);font-family:var(--font-sans)">Loading videos&hellip;</p>
+      </div>
+
+      <p class="no-results" role="status">No videos match the selected category.</p>
+
+    </div>
+  </section>
+
+  <!-- How to add videos -->
+  <section class="section" style="background:var(--cream-dark)">
+    <div class="container" style="max-width:720px">
+      <h2 style="font-family:var(--font-sans);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--navy);margin-bottom:1rem">
+        Adding a New Video
+      </h2>
+      <p style="font-family:var(--font-sans);font-size:.95rem;color:var(--text-muted);margin-bottom:.75rem">
+        To add a video, edit <code>data/videos.json</code> and append an entry:
+      </p>
+      <pre style="background:var(--navy);color:#e0e0e0;border-radius:8px;padding:1.25rem;overflow-x:auto;font-size:.85rem"><code>{
+  "id": "YOUTUBE_VIDEO_ID",
+  "title": "Video Title",
+  "description": "One-sentence description of the video.",
+  "category": "Systems Biology",
+  "date": "2026-05-12"
+}</code></pre>
+      <p style="font-family:var(--font-sans);font-size:.88rem;color:var(--text-muted);margin-top:.75rem">
+        The <code>id</code> is the 11-character YouTube video ID from the URL
+        (e.g. <code>youtube.com/watch?v=<strong>dQw4w9WgXcQ</strong></code>).
+        No build step is needed — the page reads this file directly.
+        <a href="contact.html" style="color:var(--gold)">Suggest a video &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>BiosystemsHub</h3>
+        <p>A curated resource for biological systems science — featuring peer-reviewed articles, video lectures, and community contributions from researchers worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles/index.html">Articles</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="articles/index.html">Systems Biology</a></li>
+          <li><a href="articles/index.html">Ecology</a></li>
+          <li><a href="articles/index.html">Genetics &amp; Genomics</a></li>
+          <li><a href="articles/index.html">Computational Biology</a></li>
+          <li><a href="articles/index.html">Neuroscience</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BiosystemsHub. Content licensed under
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.
+      </span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

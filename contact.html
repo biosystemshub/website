@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="site-root" content="">
+  <title>Contact &amp; Submit — BiosystemsHub</title>
+  <meta name="description" content="Submit an article, suggest a video, or get in touch with the BiosystemsHub team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact">
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="BiosystemsHub home">
+      <div class="nav-brand-icon" aria-hidden="true">B</div>
+      <span class="nav-brand-name">Biosystems<span>Hub</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="articles/index.html">Articles</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+<main class="page-main">
+
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep" aria-hidden="true">›</span>
+        <span>Contact</span>
+      </nav>
+      <h1>Contact &amp; Submit</h1>
+      <p>Submit an article, suggest a video, or send us a message.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+
+        <!-- Submission form -->
+        <div>
+          <h2 style="font-family:var(--font-serif);color:var(--navy);font-size:1.4rem;margin-bottom:1.5rem">
+            Article Submission Form
+          </h2>
+
+          <!--
+            SETUP: Replace the action URL below with your Formspree endpoint.
+            1. Go to https://formspree.io and create a free account.
+            2. Create a new form and copy the endpoint URL (e.g. https://formspree.io/f/xxxxxxxx).
+            3. Replace "https://formspree.io/f/YOUR_FORM_ID" with your actual endpoint.
+          -->
+          <form
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            id="contact-form"
+            novalidate
+          >
+            <!-- Honeypot field to deter spam bots -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <!-- Redirect after submission (optional) -->
+            <input type="hidden" name="_next" value="">
+
+            <div class="form-group">
+              <label for="name">Full Name <span aria-hidden="true" style="color:var(--gold)">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name"
+                     placeholder="Dr. Jane Smith">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span aria-hidden="true" style="color:var(--gold)">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email"
+                     placeholder="jane.smith@university.edu">
+            </div>
+
+            <div class="form-group">
+              <label for="affiliation">Affiliation / Institution</label>
+              <input type="text" id="affiliation" name="affiliation" autocomplete="organization"
+                     placeholder="University of Examples, Department of Biology">
+            </div>
+
+            <div class="form-group">
+              <label for="submission-type">Submission Type <span aria-hidden="true" style="color:var(--gold)">*</span></label>
+              <select id="submission-type" name="submission_type" required>
+                <option value="" disabled selected>Select a type&hellip;</option>
+                <option value="Research Article">Research Article</option>
+                <option value="Review / Perspective">Review / Perspective</option>
+                <option value="Tutorial / Explainer">Tutorial / Explainer</option>
+                <option value="Video Suggestion">Video Suggestion</option>
+                <option value="Resource Suggestion">Resource Suggestion</option>
+                <option value="General Enquiry">General Enquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="category">Topic / Category</label>
+              <select id="category" name="category">
+                <option value="" disabled selected>Select a topic&hellip;</option>
+                <option>Systems Biology</option>
+                <option>Ecology</option>
+                <option>Genetics &amp; Genomics</option>
+                <option>Computational Biology</option>
+                <option>Neuroscience</option>
+                <option>Biochemistry</option>
+                <option>Bioengineering</option>
+                <option>Mathematical Biology</option>
+                <option>Synthetic Biology</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="title">Article / Video Title</label>
+              <input type="text" id="title" name="title"
+                     placeholder="Title of your article or suggested video">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Abstract / Description <span aria-hidden="true" style="color:var(--gold)">*</span></label>
+              <textarea id="message" name="message" required rows="6"
+                placeholder="Provide a short abstract (150–300 words) or describe your submission. For video suggestions, include the YouTube URL."></textarea>
+              <p class="form-hint">For article submissions, you may also attach a draft as a link (GitHub Gist, Google Docs, etc.).</p>
+            </div>
+
+            <div class="form-group">
+              <label for="draft-link">Draft / File Link</label>
+              <input type="url" id="draft-link" name="draft_link"
+                     placeholder="https://github.com/yourname/article-draft">
+              <p class="form-hint">Optional: share a link to your draft (GitHub Gist, Google Doc, or any public URL).</p>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Submission</button>
+            <div class="form-success" id="form-success" role="alert">
+              ✓ Thank you! Your submission has been received. We will review it and get back to you within 5–7 business days.
+            </div>
+          </form>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Submission guidelines">
+          <div class="sidebar-sticky">
+
+            <div class="info-box">
+              <h3>Before You Submit</h3>
+              <p>Please ensure your article:</p>
+              <ul style="margin:.75rem 0 0 1rem;list-style:disc;font-family:var(--font-sans);font-size:.88rem;line-height:1.7">
+                <li>Is original and not published elsewhere</li>
+                <li>Is written in clear, accessible English</li>
+                <li>Cites primary sources appropriately</li>
+                <li>Includes a short abstract (150–300 words)</li>
+                <li>Declares any conflicts of interest</li>
+              </ul>
+            </div>
+
+            <div class="widget">
+              <div class="widget-title">Formats Accepted</div>
+              <ul class="related-list">
+                <li>
+                  <span style="font-family:var(--font-sans);font-size:.9rem;font-weight:600;color:var(--text)">HTML</span>
+                  <span class="related-date">Preferred — ready to publish</span>
+                </li>
+                <li>
+                  <span style="font-family:var(--font-sans);font-size:.9rem;font-weight:600;color:var(--text)">Markdown</span>
+                  <span class="related-date">Converted by the team</span>
+                </li>
+                <li>
+                  <span style="font-family:var(--font-sans);font-size:.9rem;font-weight:600;color:var(--text)">Google Docs</span>
+                  <span class="related-date">Share a view link</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="widget">
+              <div class="widget-title">Review Timeline</div>
+              <p style="font-family:var(--font-sans);font-size:.88rem;color:var(--text-muted);line-height:1.6">
+                Initial review: <strong>5–7 days</strong><br>
+                Feedback &amp; revisions: <strong>2–4 weeks</strong><br>
+                Publication: <strong>within 1 week</strong> of final acceptance
+              </p>
+            </div>
+
+            <div class="widget">
+              <div class="widget-title">Article Template</div>
+              <p style="font-family:var(--font-sans);font-size:.88rem;color:var(--text-muted);line-height:1.6;margin-bottom:.75rem">
+                Use the example article as a template for your HTML submission.
+              </p>
+              <a href="articles/getting-started.html" class="card-link">View example article</a>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>BiosystemsHub</h3>
+        <p>A curated resource for biological systems science — featuring peer-reviewed articles, video lectures, and community contributions from researchers worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles/index.html">Articles</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="articles/index.html">Systems Biology</a></li>
+          <li><a href="articles/index.html">Ecology</a></li>
+          <li><a href="articles/index.html">Genetics &amp; Genomics</a></li>
+          <li><a href="articles/index.html">Computational Biology</a></li>
+          <li><a href="articles/index.html">Neuroscience</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 BiosystemsHub. Content licensed under
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.
+      </span>
+      <span>Hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // Show success message when Formspree redirects back, or on successful fetch
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', async e => {
+      const action = form.getAttribute('action');
+      // Only intercept if a real Formspree endpoint is configured
+      if (!action || action.includes('YOUR_FORM_ID')) return;
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch(action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        if (res.ok) {
+          form.reset();
+          document.getElementById('form-success').style.display = 'block';
+        }
+      } catch (_) { /* fall back to native form submit */ form.submit(); }
+    });
+  }
+</script>
+</body>
+</html>
