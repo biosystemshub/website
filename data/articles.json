@@ -1,5 +1,44 @@
 [
   {
+    "title": "Genetics and DNA: Central Dogma — DNA → RNA → Protein",
+    "date": "2026-05-13",
+    "author": "BiosystemsHub Editorial Team",
+    "affiliation": "BiosystemsHub",
+    "category": "Genetics & Genomics",
+    "tags": [
+      "DNA",
+      "RNA",
+      "protein",
+      "central dogma",
+      "transcription",
+      "translation"
+    ],
+    "description": "Explore the central dogma of molecular biology: how DNA provides instructions that are transcribed into RNA and translated into proteins, the building blocks of life.",
+    "thumbnail": "",
+    "youtubeId": "",
+    "filename": "central-dogma.html",
+    "url": "articles/central-dogma.html"
+  },
+  {
+    "title": "Genetics and DNA: How Traits Get Passed Down",
+    "date": "2026-05-13",
+    "author": "BiosystemsHub Editorial Team",
+    "affiliation": "BiosystemsHub",
+    "category": "Genetics & Genomics",
+    "tags": [
+      "traits",
+      "inheritance",
+      "dominant",
+      "recessive",
+      "genetics"
+    ],
+    "description": "Understand how inherited and learned traits differ, and explore the role of dominant and recessive genes in shaping observable characteristics.",
+    "thumbnail": "",
+    "youtubeId": "",
+    "filename": "traits-inheritance.html",
+    "url": "articles/traits-inheritance.html"
+  },
+  {
     "title": "Genetics and DNA: What is DNA? What are Genes?",
     "date": "2026-05-12",
     "author": "BiosystemsHub Editorial Team",
@@ -17,44 +56,5 @@
     "youtubeId": "",
     "filename": "genetics-and-dna.html",
     "url": "articles/genetics-and-dna.html"
-  },
-  {
-    "title": "Introduction to Systems Biology: Understanding Life as an Integrated System",
-    "date": "2026-05-12",
-    "author": "BiosystemsHub Editorial Team",
-    "affiliation": "BiosystemsHub",
-    "category": "Systems Biology",
-    "tags": [
-      "systems biology",
-      "networks",
-      "modelling",
-      "emergence",
-      "feedback"
-    ],
-    "description": "An accessible introduction to systems biology — what it is, why it matters, and the key concepts and computational tools researchers use to study living organisms as integrated wholes.",
-    "thumbnail": "",
-    "youtubeId": "",
-    "filename": "getting-started.html",
-    "url": "articles/getting-started.html"
-  },
-  {
-    "title": "How Cells Talk: A Quiet Language Written in Molecules",
-    "date": "2026-05-12",
-    "author": "BiosystemsHub Editorial Team",
-    "affiliation": "BiosystemsHub",
-    "category": "Systems Biology",
-    "tags": [
-      "cell signalling",
-      "signal transduction",
-      "receptors",
-      "calcium",
-      "neurotransmitters",
-      "systems biology"
-    ],
-    "description": "Inside the elegant signalling networks that let trillions of cells coordinate without a conductor — an accessible guide to cellular communication, receptors, and signal transduction.",
-    "thumbnail": "",
-    "youtubeId": "",
-    "filename": "how-cells-talk.html",
-    "url": "articles/how-cells-talk.html"
   }
 ]

@@ -1,16 +1,12 @@
-GENETICS AND DNA: What is DNA? What are Genes?
-DNA serves as the core set of instructions for building and running all living organisms. Genes act as small sections of DNA that code for specific traits or proteins.
+GENETICS AND DNA: Central dogma — DNA → RNA → Protein
+DNA holds the master recipe for making proteins, which build and run your cells. It passes instructions first to RNA, then to proteins — like a kitchen making a meal from a cookbook.
 
-DNA Basics
-DNA, short for deoxyribonucleic acid, forms a twisted ladder known as a double helix. Its two strands consist of a backbone made from sugar (deoxyribose) and phosphate groups, linked by pairs of four chemical bases: adenine (A) pairs with thymine (T), and guanine (G) pairs with cytosine (C). These base sequences store the genetic code that determines everything from eye color to height. In humans, the full DNA molecule spans about 3 billion base pairs, organized into 23 pairs of chromosomes inside nearly every cell's nucleus. This compact packaging allows cells to carry a lifetime's worth of hereditary information.
-
-DNA as Instructions
-Picture DNA as a vast recipe book for life. The order of its bases provides precise directions for cells to produce proteins, the workhorses that build tissues, carry oxygen, fight infections, and regulate body processes. The journey begins with transcription: an enzyme unzips the DNA double helix, and a single-stranded molecule called messenger RNA (mRNA) copies the gene's code. This mRNA then moves to ribosomes in the cell's cytoplasm, where translation assembles amino acids into functional proteins based on the RNA sequence. Without these instructions, cells couldn't grow, divide, or adapt to changes like injury or infection.
-
-What Genes Are
-Genes represent targeted segments of DNA, typically hundreds to thousands of bases long, each dedicated to a particular job like making a specific protein. Humans possess roughly 20,000 to 25,000 genes, which account for only about 2% of total DNA — the remaining "non-coding" DNA plays roles in gene regulation, chromosome structure, and even evolution. Genes occupy fixed positions, or loci, on chromosomes, with each person inheriting one copy from mom and one from dad, often as slightly different versions called alleles. These variations explain why siblings look similar yet unique.
-
-Trait Examples
-Genes shape observable traits through their protein products. Eye color offers a clear case: specific genes control melanin pigment in the iris. A dominant allele produces more melanin for brown eyes, while a recessive one yields less for blue eyes, altering light reflection.
-
-Blood type provides another straightforward example. Genes on chromosome 9 dictate tags on red blood cells. The A allele adds A tags, B adds B tags, AB adds both, and O adds none — determining compatibility for transfusions.
+Recipe Analogy Explained
+DNA = The recipe book stored safely in the kitchen's locked cabinet (cell nucleus). It has instructions for thousands of "dishes" (proteins) like muscle builders or oxygen carriers.
+RNA = The handwritten message copied from one recipe page and handed to the cook (ribosomes). Messenger RNA (mRNA) carries just that one recipe's steps out of the nucleus since DNA stays protected inside.
+Protein = The finished meal assembled by the cook. Ribosomes read the mRNA note three letters at a time (codons), while helper RNA molecules fetch ingredients (amino acids) to link into the final protein chain.
+Step-by-Step Process
+Transcription (Copying): An enzyme unzips a small DNA section like opening the recipe book. It builds a matching mRNA strand using DNA bases as a template (A pairs with U in RNA, not T). The mRNA note leaves the nucleus.
+Translation (Cooking): mRNA reaches ribosomes in the cell's workspace. Each codon calls for a specific amino acid. Transfer RNA matches and delivers 20 amino acids, which link up — 20 might make a short hormone, hundreds a big muscle protein.
+Result: Proteins fold into shapes for jobs like speeding reactions (enzymes), fighting germs (antibodies), or carrying oxygen (hemoglobin).
+This flow happens millions of times daily so your cells grow, repair, and function. One DNA change alters the recipe, changing the protein and possibly traits like height or disease risk.
