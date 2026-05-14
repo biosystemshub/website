@@ -220,7 +220,6 @@ def _footer(prefix: str = '../') -> str:
       <span>&copy; 2026 BiosystemsHub. Content licensed under
         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.
       </span>
-      <span>Hosted on GitHub Pages</span>
     </div>
   </div>
 </footer>'''
