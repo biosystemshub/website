@@ -1,5 +1,25 @@
 [
   {
+    "title": "Genetics and DNA: CRISPR and Gene Editing",
+    "date": "2026-05-16",
+    "author": "BiosystemsHub Editorial Team",
+    "affiliation": "BiosystemsHub",
+    "category": "Genetics & Genomics",
+    "tags": [
+      "CRISPR",
+      "gene editing",
+      "DNA",
+      "RNA",
+      "genome engineering",
+      "biotechnology"
+    ],
+    "description": "Learn how CRISPR edits DNA with precision, its uses in medicine, agriculture, and the environment, plus risks and common myths.",
+    "thumbnail": "https://images.unsplash.com/photo-1633167606207-d840b5070fc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=500",
+    "youtubeId": "",
+    "filename": "crispr-and-gene-editing.html",
+    "url": "articles/crispr-and-gene-editing.html"
+  },
+  {
     "title": "Genetics and DNA: Central Dogma — DNA → RNA → Protein",
     "date": "2026-05-13",
     "author": "BiosystemsHub Editorial Team",
