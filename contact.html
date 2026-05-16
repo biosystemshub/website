@@ -161,7 +161,7 @@
             <div class="form-group">
               <label for="draft-link">Draft / File Link</label>
               <input type="url" id="draft-link" name="draft_link"
-                     placeholder="https://github.com/yourname/article-draft">
+                     placeholder="https://abc.com/yourname/article-draft">
               <p class="form-hint">Optional: share a link to your draft (GitHub Gist, Google Doc, or any public URL).</p>
             </div>
 
@@ -200,6 +200,8 @@
                   if (json.result === 'success') {
                     form.reset();
                     success.style.display = 'block';
+                    btn.textContent = 'Sent ✓';
+                    btn.style.background = '#2d5016';
                   } else {
                     throw new Error('unexpected response');
                   }
