@@ -174,7 +174,6 @@ def _nav(active: str = 'articles') -> str:
     links = [
         ('index.html',          '../index.html',          'Home'),
         ('articles/index.html', '../articles/index.html', 'Learn'),
-        ('videos.html',         '../videos.html',         'Videos'),
         ('resources.html',      '../resources.html',      'Resources'),
         ('about.html',          '../about.html',          'About'),
         ('contact.html',        '../contact.html',        'Contact'),
@@ -192,14 +191,13 @@ def _footer(prefix: str = '../') -> str:
     <div class="footer-grid">
       <div class="footer-about">
         <h3>BiosystemsHub</h3>
-        <p>A curated resource for biological systems science — featuring peer-reviewed articles, video lectures, and community contributions from researchers worldwide.</p>
+        <p>A curated resource for biological systems science — featuring peer-reviewed articles and community contributions from researchers worldwide.</p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
         <ul>
           <li><a href="{prefix}index.html">Home</a></li>
           <li><a href="{prefix}articles/index.html">Learn</a></li>
-          <li><a href="{prefix}videos.html">Videos</a></li>
           <li><a href="{prefix}resources.html">Resources</a></li>
           <li><a href="{prefix}about.html">About</a></li>
           <li><a href="{prefix}contact.html">Contact</a></li>
@@ -272,7 +270,6 @@ def generate_articles_index(articles: list[dict]) -> str:
     <ul class="nav-links" id="nav-links" role="list">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../articles/index.html" class="active">Learn</a></li>
-      <li><a href="../videos.html">Videos</a></li>
       <li><a href="../resources.html">Resources</a></li>
       <li><a href="../about.html">About</a></li>
       <li><a href="../contact.html">Contact</a></li>

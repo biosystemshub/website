@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Page-specific initialisation
   const page = document.body.dataset.page;
-  if (page === 'home')   initHomepageVideos();
-  if (page === 'videos') initVideosPage();
+  if (page === 'home') initHomepageVideos();
 });
 
 // ── Active nav link ──────────────────────────────────────────
@@ -24,7 +23,6 @@ function markActiveNav() {
     let match = false;
     if (page === 'home'      && href.endsWith('index.html') && !href.includes('articles')) match = true;
     if ((page === 'articles' || page === 'article') && href.includes('articles/index.html')) match = true;
-    if (page === 'videos'    && href.endsWith('videos.html'))    match = true;
     if (page === 'resources' && href.endsWith('resources.html')) match = true;
     if (page === 'about'     && href.endsWith('about.html'))     match = true;
     if (page === 'contact'   && href.endsWith('contact.html'))   match = true;
@@ -110,48 +108,6 @@ function initHomepageVideos() {
     .catch(() => {
       container.innerHTML = emptyMsg('Videos unavailable. Serve the site with a local server to preview.');
     });
-}
-
-// ── Videos page: render all videos with filter ───────────────
-function initVideosPage() {
-  const container = document.getElementById('videos-grid');
-  if (!container) return;
-
-  const base = getSiteRoot();
-  fetch(base + 'data/videos.json')
-    .then(r => { if (!r.ok) throw new Error('Not found'); return r.json(); })
-    .then(videos => {
-      if (!videos.length) {
-        container.innerHTML = '<p class="no-results visible">No videos published yet.</p>';
-        return;
-      }
-      container.innerHTML = videos.map(v => videoCardHTML(v, true)).join('');
-      injectVideoCategoryButtons(videos);
-      attachPlayHandlers(container);
-      // Re-run filter init now that buttons and cards exist
-      initCategoryFilter();
-    })
-    .catch(() => {
-      container.innerHTML = '<p style="color:var(--text-muted);font-family:var(--font-sans);padding:2rem 0">' +
-        'Could not load videos. Use <code>python -m http.server 8000</code> for local preview.' +
-        '</p>';
-    });
-}
-
-// Inject category filter buttons based on video data
-function injectVideoCategoryButtons(videos) {
-  const bar = document.querySelector('.filter-bar');
-  if (!bar) return;
-
-  const cats = [...new Set(videos.map(v => v.category).filter(Boolean))].sort();
-  cats.forEach(cat => {
-    if (bar.querySelector(`[data-filter="${CSS.escape(cat)}"]`)) return;
-    const btn = document.createElement('button');
-    btn.className = 'filter-btn';
-    btn.dataset.filter = cat;
-    btn.textContent = cat;
-    bar.appendChild(btn);
-  });
 }
 
 // ── Video card HTML template ─────────────────────────────────
