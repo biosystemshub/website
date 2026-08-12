@@ -1,24 +1,34 @@
-Protein synthesis is the fundamental process by which individual cells build specific proteins based on instructions stored within their genetic code. Proteins perform virtually all essential functions in living organisms—acting as structural scaffolding, enzymes, signaling molecules, and transporters. The core pathway of protein synthesis follows molecular biology's "Central Dogma": DNA is copied into messenger RNA (mRNA), which is then decoded to form a polypeptide chain.
+Natural Selection: Nature’s Engine of Evolution
+Natural selection is the process where organisms with traits that suit their environment better are more likely to survive and reproduce. Over time, this changes the genes in a population and leads to evolution. It is the main way evolution creates adaptations and the variety of life we see on Earth.
 
-Phase 1: Transcription (Reading the Master Blueprint)
-In eukaryotic cells, the genetic blueprint—DNA—is safely stored inside the cell nucleus. Because DNA cannot leave the nucleus without risking damage, the cell creates a portable copy of the required gene.
+What is natural selection?
+Natural selection happens when three things are true: individuals in a population have different traits, some of these traits can be passed from parents to offspring, and some traits give an advantage in survival or reproduction. Individuals with helpful traits tend to live longer and have more babies, so those traits become more common in the next generation. In this way, the environment “selects” useful variations, even though there is no conscious decision involved.
 
-Initiation: An enzyme called RNA polymerase binds to a specific region on the DNA strand known as the promoter. It unzips the double helix to expose the gene's nucleotide sequence.
+Charles Darwin called this “differential survival and reproduction” because of differences in phenotype, which means the visible features of an organism. Today, scientists explain that natural selection acts on heritable genetic differences that affect fitness, which is how many genes an organism passes on to the next generation.
 
-Elongation: RNA polymerase reads one strand of the DNA (the template strand) and synthesizes a single strand of complementary messenger RNA (mRNA). Instead of thymine (T), RNA uses uracil (U) to pair with adenine (A).
+How natural selection drives evolution
+Evolution is the change in inherited traits in a population over many generations. Natural selection causes evolution by making helpful gene variants (alleles) more common and harmful ones less common. This is called adaptive evolution because it leads to traits that help organisms survive better in their environment.
 
-Termination: Once the enzyme reaches a stop signal, the newly created precursor mRNA detaches, and the DNA strands rewind.
+For example, imagine a population of beetles where some are brown and some are green. If brown beetles are harder for predators to see on tree bark, they will survive longer and have more offspring. Because colour is inherited, the next generation will have more brown beetles. After many generations, most beetles in the population may be brown. This change is evolution driven by natural selection.
 
-Processing: Before exiting the nucleus, the pre-mRNA undergoes modifications: non-coding segments (introns) are spliced out, leaving only coding segments (exons). A protective cap and tail are added to ensure stability. The mature mRNA then travels through a nuclear pore into the cytoplasm.
+Types of natural selection
+Natural selection can work in different ways depending on the environment:
 
-Phase 2: Translation (Building the Protein)
-Once in the cytoplasm, the mRNA strand attaches to a ribosome, the cellular machinery responsible for assembling proteins. The ribosome reads the mRNA sequence in three-base groups called codons. Each codon specifies one of 20 distinct amino acids.
+Directional selection favours one extreme of a trait, so the average in the population shifts. For example, giraffes with longer necks can reach higher leaves and may have an advantage.
 
-Initiation: The ribosome binds near the start codon (usually AUG, which codes for the amino acid methionine). A specialized molecule called transfer RNA (tRNA) brings the corresponding methionine amino acid to the ribosome. Each tRNA carries a three-base anticodon that complements the mRNA codon.
+Stabilizing selection favours average traits and reduces extremes. For example, human babies with very low or very high birth weights have lower survival, so medium weights are favoured.
 
-Elongation: As the ribosome moves along the mRNA strand codon by codon, successive tRNA molecules deliver matching amino acids. The ribosome forms covalent peptide bonds between these incoming amino acids, linking them into a growing peptide chain.
+Disruptive selection favours both extremes and not the middle, which can lead to groups splitting into different species. For example, birds with very small or very large beaks may do better than birds with medium beaks if they use different food sources.
 
-Termination: Translation continues until the ribosome hits a stop codon (UAA, UAG, or UGA). No tRNA recognizes these sequences; instead, a release factor prompts the ribosome to release the completed polypeptide chain and disassemble.
+These patterns show how natural selection can change populations when the environment, food, or predators change.
 
-Post-Translational Folding and Processing
-A newly synthesized chain of amino acids is not yet a functional protein. To work properly, it must fold into a precise three-dimensional structure. Helper proteins called chaperones assist in folding the chain into specific helices, sheets, and intricate tertiary loops. Some proteins undergo additional chemical additions—such as attached carbohydrates or lipids—in the endoplasmic reticulum and Golgi apparatus before being dispatched to their final destinations inside or outside the cell.
+Real-world examples
+There are many clear examples of natural selection. Darwin’s finches in the Galápagos Islands developed different beak shapes to eat different foods on different islands. In industrial England, peppered moths changed from mostly light-coloured to mostly dark-coloured because soot made trees darker, so dark moths were harder for predators to see. A modern example is antibiotic resistance in bacteria: bacteria with mutations that resist antibiotics survive treatment and multiply, creating resistant strains.
+
+These examples show that natural selection is still happening today, not just in the past.
+
+Why natural selection matters
+Natural selection explains how complex adaptations can appear without any designer. It links genetic variation to success in the environment and shows how life has diversified and adapted to almost every habitat on Earth. By favouring traits that improve survival and reproduction, natural selection constantly improves how well organisms fit their environment, creating the branching tree of life we see now.
+
+In short, natural selection is the engine of adaptive evolution: it turns random genetic variation into useful, organised change, shaping the diversity and complexity of life over time.
+
